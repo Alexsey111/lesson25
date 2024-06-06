@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная - Природа горного Алтая{% endblock %}
+
+{% block content %}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='imge/311.jpg') }}" class="d-block w-100" alt="Озеро Ситр Алтай">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='imge/312.jpg') }}" class="d-block w-100" alt="Тайменье озеро Алтай">
+        </div>
+        <div class="carousel-item">
+            <img src="{{ url_for('static', filename='imge/313.jpg') }}" class="d-block w-100" alt="Мульта горный Алтай">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Предыдущий</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Следующий</span>
+    </a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='imge/314.jpg') }}" class="card-img-top" alt="Гора Белуха">
+            <div class="card-body">
+                <h5 class="card-title">Гора Белуха</h5>
+                <p class="card-text">Белуха с южно-алтайского Ӱч-Сӱмер — «Трёхглавая. Высшая точка Алтайских гор (4509 м), одна из крупнейших горных вершин России и самая высокая гора Сибири.</p>
+                <a href="{{ url_for('about') }}#collapseOne" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='imge/315.jpg') }}" class="card-img-top" alt="Река Катунь">
+            <div class="card-body">
+                <h5 class="card-title">Река Катунь</h5>
+                <p class="card-text">Катунь — река в республике Алтай и Алтайском крае. Река берёт начало на южном склоне Катунского хребта у г. Белухи на леднике Геблера.</p>
+                <a href="{{ url_for('about') }}#collapseTwo" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='imge/316.jpg') }}" class="card-img-top" alt="Телецкое озеро">
+            <div class="card-body">
+                <h5 class="card-title">Телецкое озеро</h5>
+                <p class="card-text">Телецкое озеро расположено на северо-востоке Горного Алтая, на стыке с хребтом Западный Саян. На южно-алтайском языке название - Алтын Кӧл, а на монгольском Алтын нуур, оба этих названия можно перевести как «Золотое озеро».</p>
+                <a href="{{ url_for('about') }}#collapseThree" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
